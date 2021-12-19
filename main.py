@@ -14,7 +14,7 @@ states_data = pd.read_csv("50_states.csv")
 
 while len(entered_states) < 50:
 
-    state_name = screen.textinput(title="Name of State", prompt="Enter the name of a state").title()
+    state_name = screen.textinput(title=f"{len(entered_states)}/50 States", prompt="Enter the name of a state").title()
     if state_name in entered_states:
         print(f"{state_name} was already entered")
     elif state_name in states_data.state.to_list():
